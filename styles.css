@@ -262,6 +262,14 @@ footer {
     align-items: center;
   }
 
+  .contact-section input,
+  .contact-section textarea {
+    width: 90%;
+  }
+  .btn {
+    width: 50%;
+  }
+
   footer {
     display: flex;
     justify-content: center;
