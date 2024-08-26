@@ -199,6 +199,7 @@ footer {
   text-align: center;
   padding: 20px 0;
 }
+
   
 @media (max-width: 768px) {
   header nav {
@@ -259,5 +260,13 @@ footer {
   .features-grid {
     flex-direction: column;
     align-items: center;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+  }
+  footer p {
+    width: 290px;
   }
 }
