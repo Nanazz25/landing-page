@@ -1,0 +1,263 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background: #ccc;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+header nav {
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+header .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 30px;
+  display: flex;
+}
+
+header ul li {
+  margin-left: 20px;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  transition: 0.1s;
+}
+
+header ul li a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #1371b4;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.2s linear;
+}
+
+header ul li a:hover::after {
+  width: 100%;
+}
+
+header ul li a:hover {
+  color: #1371b4;
+}
+
+.hero-section {
+  background: url("IMG-Nanaz.jpg") no-repeat center center/cover;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-section .hero-content {
+  max-width: 600px;
+}
+
+.hero-section h1 {
+  font-size: 3em;
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section p {
+  font-size: 1.2em;
+  margin: 20px 0;
+}
+
+.burger-nav {
+  display: none;
+}
+
+.btn {
+  display: inline-block;
+  background: #007bff;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1em;
+  transition: 0.5s;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.btn:hover {
+  background: #034b98;
+}
+.btn:active {
+  box-shadow: none;
+}
+
+.features-section,
+.about-section,
+.contact-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.features-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  max-width: 300px;
+  margin: 20px;
+}
+
+.features-section h2,
+.about-section h2,
+.contact-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.contact-section form {
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact-section input,
+.contact-section textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.contact-section input:focus {
+  outline: none;
+}
+.contact-section input:focus::placeholder {
+  color: transparent;
+}
+
+.contact-section textarea {
+  height: 100px;
+}
+.contact-section textarea:focus {
+  outline: none;
+}
+.contact-section textarea:focus::placeholder {
+  color: transparent;
+}
+
+.logo2 a img {
+  height: 20px;
+  margin: -.25em 0;
+}
+
+.logo2 a {
+  background: #fff;
+  padding: 10px;
+  margin: 0 .5em;
+  border-radius: 100%;
+}
+
+.logo2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2em 0;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+  
+@media (max-width: 768px) {
+  header nav {
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    background: #333;
+    color: #fff;
+    text-align: center;
+  }
+
+  header .burger-nav span {
+    display: block;
+    padding: 2px 17px;
+    background: #fff;
+    margin: .35em;
+  }
+  header .burger-nav {
+    display: block;
+    margin: 2em;
+    cursor: pointer;
+  }
+
+  header ul {
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    top: 0;
+    margin: 3.15em 0;
+    left: 0;
+    z-index: -999;
+    bottom: 0;
+    padding: 0 2em;
+    width: 170px;
+    margin: 0 -20em;
+/*     visibility: hidden; */
+  }
+
+  .active {
+    transform: translateX(0px) !important;
+    transition: all .5s all;
+  }
+  
+  .menu-btn {
+    transform: translateX(-1200px);
+    margin: 3.15em 0;
+    transition: all .5s;
+  }
+
+  header ul li {
+    margin: 1em 0;
+  }
+
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
